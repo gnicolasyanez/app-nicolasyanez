@@ -1,0 +1,41 @@
+.App-header {
+  display: block;
+    text-align: center;
+    background-color: #E7EBDA;
+    padding: 0.5em;
+    margin: 2em 20em;
+}
+
+header h1{
+  text-transform: uppercase;
+}
+
+header ul{
+  display: inline;
+  list-style-type: none;
+  margin: 0.5em auto;
+  text-align: center;
+}
+
+header ul li{
+  display: inline;
+}
+
+header ul li a{
+  text-decoration: none;
+  border: solid;
+  border-color: #7D8471;
+  border-radius: 50px;
+  background-color: #7D8471;
+  color: white;
+  padding: 0.3em;
+}
+
+header ul li a:hover{
+  background-color: #B8B799;
+  border-color: #B8B799;
+}
+
+header ul li a:active{
+  padding: 0.2em;
+}

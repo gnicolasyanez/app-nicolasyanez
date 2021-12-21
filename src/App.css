@@ -14,14 +14,18 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  display: block;
+    text-align: center;
+    background-color: #E7EBDA;
+    padding: 0.5em;
+    margin: 2em 20em;
+}
+
+header ul{
+  display: inline;
+  list-style-type: none;
+  margin: 0.5em auto;
+  text-align: center;
 }
 
 .App-link {
@@ -35,4 +39,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.navbar-nav.navbar-center {
+  position: absolute;
+  left: 50%;
+  transform: translatex(-50%);
 }
