@@ -1,19 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-import Menu from './component/Menu';
+import Menu from './component/Navbar/Menu';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemListContainer from './component/ItemListContainer/ItemListContainer';
 
 function App() {
   return (
     <div className="App" onClick={ ()=>console.log() }>
 
-      <header className="App-header">
-        
-        
         <p>
          FUTURO E-COMMERCE YAÑEZ
         </p>
+      <Menu />
+      <ItemListContainer greeting='Bienvenidos a mi Futuro E-Commerce'/>
 
-        <Menu />
+      <header className="App-header">
+        
+        
         
         <a
           className="App-link"
