@@ -2,7 +2,7 @@ import React from 'react'
 import button from 'react-bootstrap/button';
 import { } from 'react-bootstrap';
 import { FaCartPlus } from 'react-icons/fa'
-
+import CartWidget from './CartWidget';
 
 
 
@@ -33,9 +33,9 @@ function Menu() {
                             <li><a className="dropdown-item" href="#">Vehiculos</a></li>
                             <li><hr className="dropdown-divider" /></li>   
                         </ul>
-                        <li className="nav-item"><a className="nav-link" href="#"><FaCartPlus/></a></li>
+                        
                     </li>
-                    
+                    <li><CartWidget /></li>
                 </ul>
             </div>
         </div>
