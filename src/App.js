@@ -3,7 +3,7 @@ import './App.css';
 import Menu from './component/Navbar/Menu';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemListContainer from './component/ItemListContainer/ItemListContainer';
-import ItemCount from './component/ItemCount/ItemCount'
+import ItemCount from '../src/component/ItemCount/ItemCount'
 
 function App() {
   return (

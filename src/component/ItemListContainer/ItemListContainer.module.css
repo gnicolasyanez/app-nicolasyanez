@@ -1,3 +1,11 @@
 .Titulo{
 color: red;
 } 
+.divItemListContainer {
+    background-color: #F8F9FA;
+}
+
+.saludo {
+    text-align: center;
+    margin-top: 2rem;
+}
