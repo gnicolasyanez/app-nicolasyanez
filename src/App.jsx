@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './components/ItemListContainer/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
 function App() {
@@ -13,10 +14,11 @@ function App() {
     <div>
 
         <NavBar />
-        <ItemListContainer greeting='Bienvenidos a nuestro e-commerce!' />
+        <ItemListContainer greeting='Bienvenidos a NEUMACAR!' />
+        <ItemDetailContainer />
     </div>
   );
 
 }
 
-export default App;
+export default App

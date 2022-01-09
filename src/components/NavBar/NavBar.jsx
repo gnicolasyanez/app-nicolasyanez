@@ -11,7 +11,7 @@ function NavBar() {
     return (
         <div>
             <Navbar bg="light" variant="light">
-                <a href="#inicio"><img src={logo} alt="logo" className="logo" /></a>
+            <a href="#inicio"><img src={logo} alt="logo" className="logo" /></a>
                 <Container>
                     <Navbar.Brand href="#inicio">FUTURO E-COMMERCE</Navbar.Brand>
                     <Nav className="me-auto">

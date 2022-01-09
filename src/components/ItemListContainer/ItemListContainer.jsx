@@ -18,10 +18,15 @@ function ItemListContainer({ greeting }) {
 
     }, [])
 
+    console.log(productos)
+
     return (
         <div className='divItemListContainer'>
             <h1 className='saludo'>{greeting}</h1>
-            { loading ? <h3>Aguarde unos segundos, en breve se terminará de cargar</h3> : <ItemList productos={productos} /> }
+            { loading ? <h3>Aguarde unos segundos, Cargando...</h3>
+             : 
+            <ItemList productos={productos} /> 
+            }
         </div>
     )
 }

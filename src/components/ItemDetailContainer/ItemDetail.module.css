@@ -1,0 +1,20 @@
+/* .gridcontainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "nombre"
+      "imagen"
+      "descripcion"
+      "precio";
+  }
+  
+  .nombre { grid-area: nombre; }
+  */
+  .imagen { grid-area: imagen; width: 5px; height: 5px; }
+  
+  .descripcion { grid-area: descripcion; }
+  
+  .precio { grid-area: precio; } 
+  
