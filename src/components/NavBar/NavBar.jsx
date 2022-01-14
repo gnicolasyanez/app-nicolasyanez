@@ -1,4 +1,5 @@
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 import logo from '../../assets/logo.png';
 import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
@@ -13,13 +14,15 @@ function NavBar() {
             <Navbar bg="light" variant="light">
             <a href="#inicio"><img src={logo} alt="logo" className="logo" /></a>
                 <Container>
-                    <Navbar.Brand href="#inicio">FUTURO E-COMMERCE</Navbar.Brand>
+                    <Link to='/'>NEUMACAR</Link>
                     <Nav className="me-auto">
-                        <Nav.Link href="#inicio">Inicio</Nav.Link>
-                        <Nav.Link href="#galeria">Galeria</Nav.Link>
-                        <Nav.Link href="#tienda">Tienda</Nav.Link>
+                        <Link to="/">Inicio</Link>
+                        <Link to="/categoria/asfalto">Asfalto</Link>
+                        <Link to="/categoria/trial">Trial</Link>
                     </Nav>
+                    <Link to='/cart'>
                     <CartWidget />
+                    </Link>
                 </Container>
             </Navbar>
         </div>

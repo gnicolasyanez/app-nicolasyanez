@@ -13,6 +13,9 @@ const ItemDetail = ({producto}) => {
             <div classNames={s.imagen}>
             <img src={producto.img} width="85px" height="85px"/>
             </div>
+            <div className={s.categoria}>
+            {producto.categoria}
+            </div>
             <div className={s.descripcion}>
             {producto.descripcion}
             </div>
