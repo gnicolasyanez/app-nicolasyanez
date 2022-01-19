@@ -1,11 +1,15 @@
 import './Item.css';
 import { Card } from "react-bootstrap"
 import { Button } from "react-bootstrap" 
-import ItemCount from "./ItemCount"
+
 import { Link } from 'react-router-dom';
+import {useState} from 'react'
 
-function Item({ nombre, imagen, categoria, precio, descripcion, stock, id }) {
+//const Item = ({producto}) => {
 
+function Item({ nombre, producto, imagen, categoria, precio, descripcion, stock, id }) {
+ 
+    
     return (
         
         <div 
@@ -22,7 +26,7 @@ function Item({ nombre, imagen, categoria, precio, descripcion, stock, id }) {
                     </Card.Text>
                         <Link to={`/categoria/${categoria}`}></Link>
                     <p>{precio}</p>
-                    <ItemCount stock={stock}/>
+                    
                     <div className='divButtonCardItem'>
                         <Link to={`/detalle/${id}`}>
                         <Button variant="dark" className='buttonCardItem'>Detalle del producto</Button>
@@ -30,8 +34,12 @@ function Item({ nombre, imagen, categoria, precio, descripcion, stock, id }) {
                     </div>
                 </Card.Body>
             </Card>
+
+        
         </div>
     )
 }
+
+
 
 export default Item

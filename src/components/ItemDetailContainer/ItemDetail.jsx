@@ -1,8 +1,15 @@
 import s from "../ItemDetailContainer/ItemDetail.module.css"
+import { useState } from "react"
+import ItemCount from "../ItemListContainer/ItemCount"
+import { Link } from "react-router-dom"
 
 const ItemDetail = ({producto}) => {
 
-
+    const [show , setShow ] = useState(true)
+    const onAdd = (counter)=> {
+        setShow(false)
+        // sumarAlCarrito({ ...producto, cantidad:counter})
+    }
     
     
     return (
@@ -21,7 +28,12 @@ const ItemDetail = ({producto}) => {
             </div>
             <div className={s.precio}>
             {producto.precio}
-            </div>       
+            </div>     
+            {show ? <ItemCount stock={producto.stock} onAdd={onAdd}/> : 
+        <div>    
+            <Link to="/cart"><button class="buttonCardItem btn btn-dark">Terminar compra</button></Link>
+            <Link to="/"><button class="buttonCardItem btn btn-dark">Seguir comprando</button></Link>
+        </div>    }  
             
         </div>
     )

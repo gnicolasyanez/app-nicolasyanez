@@ -8,7 +8,7 @@ import ItemCount from './components/ItemListContainer/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 
-function App() {
+const App = ()=> {
 
   return (
 
