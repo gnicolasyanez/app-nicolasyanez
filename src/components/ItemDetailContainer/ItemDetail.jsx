@@ -2,11 +2,16 @@ import s from "../ItemDetailContainer/ItemDetail.module.css"
 import { useState } from "react"
 import ItemCount from "../ItemListContainer/ItemCount"
 import { Link } from "react-router-dom"
+import { useCartContext } from "../../context/cartContext"
 
 const ItemDetail = ({producto}) => {
 
+    const {agregarAlCarrito} = useCartContext()
+
     const [show , setShow ] = useState(true)
-    const onAdd = (counter)=> {
+    function onAdd(counter) {
+        console.log(counter) 
+        agregarAlCarrito( {...producto, cantidad: counter} )
         setShow(false)
         // sumarAlCarrito({ ...producto, cantidad:counter})
     }

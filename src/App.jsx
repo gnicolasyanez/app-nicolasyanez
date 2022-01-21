@@ -6,14 +6,16 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemCount from './components/ItemListContainer/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { CartContextProvider } from './context/cartContext';
 
 
 const App = ()=> {
 
   return (
-
-    <BrowserRouter>
-
+  <CartContextProvider>
+    <div>
+      <BrowserRouter>
+      
         <NavBar />
         <Routes>
              <Route exact path='/' element={<ItemListContainer greeting='Bienvenidos a NEUMACAR!' />} />
@@ -21,7 +23,9 @@ const App = ()=> {
              <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer />} />  
              <Route exact path='/cart' element={<CartWidget />} />              
         </Routes>
-    </BrowserRouter>
+      </BrowserRouter>
+    </div>  
+  </CartContextProvider>  
   );
 
 }
