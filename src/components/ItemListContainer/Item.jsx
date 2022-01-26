@@ -3,7 +3,7 @@ import { Card } from "react-bootstrap"
 import { Button } from "react-bootstrap" 
 
 import { Link } from 'react-router-dom';
-import {useState} from 'react'
+import { useState } from 'react'
 
 //const Item = ({producto}) => {
 
