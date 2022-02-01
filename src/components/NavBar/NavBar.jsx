@@ -5,11 +5,13 @@ import Navbar from 'react-bootstrap/Navbar';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import CartWidget from './CartWidget';
-
+import { useCartContext } from '../../context/cartContext'
 
 function NavBar() {
-
+    const {cantidadItem} = useCartContext()
+console.log('Navbar')
     return (
+<>        
         <div>
             <Navbar bg="light" variant="light">
             <a href="#inicio"><img src={logo} alt="logo" className="logo" /></a>
@@ -19,14 +21,16 @@ function NavBar() {
                         <Link to="/">Inicio</Link>
                         <Link to="/categoria/asfalto">Asfalto</Link>
                         <Link to="/categoria/trial">Trial</Link>
-                    </Nav>
+                    
                     <Link to='/cart'>
                     <CartWidget />
+                    {cantidadItem() !== 0 && cantidadItem() }
                     </Link>
+                    </Nav>
                 </Container>
             </Navbar>
         </div>
-
+</>
     )
 }
 

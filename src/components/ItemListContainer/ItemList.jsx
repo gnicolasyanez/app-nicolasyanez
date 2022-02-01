@@ -1,9 +1,9 @@
 import './ItemList.css';
 import Item from './Item'
+import {memo} from 'react'
 
-function ItemList({ productos }) {
-
-
+const ItemList = memo( ( { productos } )=>  {
+    console.log('itemList')
 
     return (
         <div className='divItemList'>
@@ -11,5 +11,7 @@ function ItemList({ productos }) {
         </div>
     )
 }
+
+, (oldProps, newProps)=> oldProps.productos.lenght === newProps.productos.lenght)
 
 export default ItemList

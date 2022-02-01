@@ -26,18 +26,18 @@ console.log(cartList)
     // return totalProducts
     // }
 
-    function sumaCarrito(){
+    // function sumaCarrito(){
 
-        const sumaTotalCarrito =cartList.map(valorTotalCarrito=>valorTotalCarrito.qty*valorTotalCarrito.precio).reduce((prev,curr)=> prev+curr,0)
+    //     const sumaTotalCarrito =cartList.map(valorTotalCarrito=>valorTotalCarrito.qty*valorTotalCarrito.precio).reduce((prev,curr)=> prev+curr,0)
 
-    return sumaTotalCarrito
-    }
+    // return sumaTotalCarrito
+    // }
     
 
     function agregarAlCarrito(items) {
          // -1 sino lo encuenta
          const indice=cartList.findIndex(i => i.id === items.id) // 0,1,2
-         total();
+         
          if (indice > -1){
              const qtyVieja=cartList[indice].cantidad
             console.log(qtyVieja)
@@ -55,31 +55,51 @@ console.log(cartList)
     }
 
     
+    // function vaciarCarrito() {
+    //     setCartList([])
+    // }
+
+    // console.log(cartList)
+
+    // const deleteItem = (id) =>{
+    //     const itemFiltrado = cartList.filter((producto)=>producto.id !== id)
+    //     setCartList(itemFiltrado);
+    // }
+
+    // const total =() => {
+    //     const totalCarrito = cartList.reduce((prev, curr) => prev + curr.precio * curr.cantidad, 0);
+    //     return totalCarrito
+    // }
+
+    const precioTotal =()=>{
+        return cartList.reduce((acum, prod) => acum + (prod.cantidad * prod.precio) , 0)
+      }
+  
+    const borrarItem = (id) => {
+        setCartList( cartList.filter(prod => prod.id !== id) )
+    }
+
+    const cantidadItem = () =>{
+        return cartList.reduce( (acum, item)=> acum = acum + item.cantidad , 0)
+    }
+
+    
     function vaciarCarrito() {
         setCartList([])
     }
 
     console.log(cartList)
 
-    const deleteItem = (id) =>{
-        const itemFiltrado = cartList.filter((producto)=>producto.id !== id)
-        setCartList(itemFiltrado);
-    }
-
-    const total =() => {
-        const totalCarrito = cartList.reduce((prev, curr) => prev + curr.precio * curr.cantidad, 0);
-        return totalCarrito
-    }
 
     return(
         <cartContext.Provider value={{
             cartList,
             agregarAlCarrito,
-            deleteItem,
-            total,
-           
-            sumaCarrito,
-            vaciarCarrito
+            vaciarCarrito,
+            precioTotal,
+            borrarItem,
+            cantidadItem
+
         }} >
             {children}
         </cartContext.Provider>

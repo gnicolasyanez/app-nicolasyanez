@@ -2,12 +2,12 @@ import './Item.css';
 import { Card } from "react-bootstrap"
 import { Button } from "react-bootstrap" 
 
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { useState } from 'react'
 
 //const Item = ({producto}) => {
 
-function Item({ nombre, producto, imagen, categoria, precio, descripcion, stock, id }) {
+function Item({ title, producto, imageUrl, categoria, precio, descripcion, stock, id }) {
  
     
     return (
@@ -19,8 +19,11 @@ function Item({ nombre, producto, imagen, categoria, precio, descripcion, stock,
             
 
                 <Card.Body>
-                <Card.Img variant="top" src={imagen} width="5px"/>
-                    <Card.Title>{nombre}</Card.Title>
+                <Card.Img variant="top" src={imageUrl} width="5px"/>
+                    <Card.Title><div>
+                        {`${title} - ${categoria}`}
+                    </div>
+                </Card.Title>
                     <Card.Text>
                         {descripcion}
                     </Card.Text>

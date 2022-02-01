@@ -8,6 +8,7 @@ import ItemCount from './components/ItemListContainer/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CartContextProvider } from './context/cartContext';
 import CheckOut from './components/CheckOut/CheckOut';
+import Cart from './components/Cart/Cart';
 
 
 
@@ -24,7 +25,7 @@ const App = ()=> {
              <Route exact path='/' element={<ItemListContainer greeting='Bienvenidos a NEUMACAR!' />} />
              <Route exact path='/categoria/:idCategoria' element={<ItemListContainer greeting='Bienvenidos a NEUMACAR!' />} />
              <Route exact path='/detalle/:idDetalle' element={<ItemDetailContainer />} />  
-             <Route exact path='/cart' element={<CartWidget />} />
+             <Route exact path='/cart' element={<Cart />} />
             
              <Route exact path ='/CheckOut' element={<CheckOut />}/>              
         </Routes>

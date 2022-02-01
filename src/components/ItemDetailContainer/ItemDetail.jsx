@@ -19,11 +19,11 @@ const ItemDetail = ({producto}) => {
     
     return (
         <div className={s.gridcontainer}>
-            <div className={s.nombre}>
-            {producto.nombre}
+            <div className={s.title}>
+            {producto.title}
             </div>
-            <div classNames={s.imagen}>
-            <img src={producto.img} width="85px" height="85px"/>
+            <div classNames={s.imageUrl}>
+            <img src={producto.imageUrl} width="85px" height="85px"/>
             </div>
             <div className={s.categoria}>
             {producto.categoria}
